@@ -19,7 +19,6 @@ function createCard(data) {
 button &&
   button.addEventListener("click", function (event) {
     event.preventDefault();
-
     if (userTask.value.trim() !== "") {
       let data = {
         Task: userTask.value,
@@ -29,8 +28,9 @@ button &&
       block.innerHTML += card;
 
       userTask.value = "";
+      localStorage.setItem("userTask", JSON.stringify(data));
     } else {
-      alert("Iltimos taskizi kiriting !!!");
+      alert("Iltimos, vazifangizni kiriting !!!");
       userTask.focus();
     }
   });
