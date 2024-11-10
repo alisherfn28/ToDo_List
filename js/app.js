@@ -1,7 +1,7 @@
 const button = document.querySelector("#btn");
 const block = document.querySelector("#block");
 const userTask = document.querySelector("#Task");
-const list = document.querySelector("#block"); // 'list' o'zgaruvchisi
+const list = document.querySelector("#block");
 
 function createCard(data) {
   return `
